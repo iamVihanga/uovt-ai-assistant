@@ -51,14 +51,15 @@ function ChatUI({ }: Props) {
     };
   }
 
-  const handleSendMessage = async () => {
-    if (!message) return;
+  const handleSendMessage = async (suggestion?: string) => {
+    if (!message && !suggestion) return;
 
-    console.log(message)
+    let _message = message || suggestion
+
     // Add user message to conversation
     const userMessage: ConversationType = {
       id: Math.floor(Math.random() * 10000) + 1,
-      message: message,
+      message: _message!,
       user: 'user',
     };
 
@@ -66,7 +67,7 @@ function ChatUI({ }: Props) {
     setMessage('');
 
     // Get AI response
-    const ai_response = await getResponse(message);
+    const ai_response = await getResponse(_message!);
 
     // Add AI response to conversation
     const aiMessage: ConversationType = {
@@ -121,8 +122,6 @@ function ChatUI({ }: Props) {
         {messages.length === 0 && (
           <div className="flex-1 flex items-center justify-center px-6">
             <SuggestionBox
-              message={message}
-              setMessage={setMessage}
               handleSendMessage={handleSendMessage}
             />
           </div>
@@ -159,7 +158,10 @@ function ChatUI({ }: Props) {
 
       {/* Bottom Bar */}
       <div className="fixed z-50 bottom-0 h-16 w-full bg-gray-300 flex items-center py-2 px-3 shadow-lg">
-        <form onSubmit={handleSendMessage} className="flex gap-x-1 w-full items-center justify-between">
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          handleSendMessage()
+        }} className="flex gap-x-1 w-full items-center justify-between">
           <Input
             className='rounded-full border border-gray-500 bg-gray-200 text-xs placeholder:text-gray-400 '
             placeholder='Type your message here...'

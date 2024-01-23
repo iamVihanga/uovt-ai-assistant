@@ -3,9 +3,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { suggestions } from '@/lib/data';
 
 type SuggestionBoxProps = {
-  message: string,
-  setMessage: Dispatch<SetStateAction<string>>,
-  handleSendMessage: () => Promise<void>;
+  handleSendMessage: (string?: string) => Promise<void>;
 }
 
 interface SuggestionBadgeProps {
@@ -13,12 +11,7 @@ interface SuggestionBadgeProps {
   onClick: MouseEventHandler<HTMLDivElement>
 }
 
-const SuggestionBox = ({ handleSendMessage, setMessage, message }: SuggestionBoxProps) => {
-  useEffect(() => {
-    message && handleSendMessage()
-  }, [message])
-
-
+const SuggestionBox = ({ handleSendMessage }: SuggestionBoxProps) => {
   return (
     <Card className='w-full bg-cyan-50 border-teal-200 border rounded-xl'>
 
@@ -40,7 +33,7 @@ const SuggestionBox = ({ handleSendMessage, setMessage, message }: SuggestionBox
 
       <CardContent className='flex items-center flex-wrap gap-2'>
         {suggestions.map((suggestion, index) =>
-          <SuggestionBadge key={index} onClick={() => setMessage(suggestion)}>
+          <SuggestionBadge key={index} onClick={() => handleSendMessage(suggestion)}>
             {suggestion}
           </SuggestionBadge>
         )}
