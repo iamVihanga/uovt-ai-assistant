@@ -1,5 +1,5 @@
 'use client';
-import React, { FormEvent, useEffect, useRef, useState } from 'react'
+import React, { FormEvent, MouseEvent, useEffect, useRef, useState } from 'react'
 import Avatar from './Avatar';
 import { Input } from "@/components/ui/input";
 import { Button } from './ui/button';
@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToMessages, removeFromMessage } from "@/app/GlobalRedux/Features/message/messageSlice";
 import TypingDots from './TypingDots';
 import ReactMarkdown from 'react-markdown'
+import SuggestionBox from '@/components/SuggestionBox'
 
 type Props = {}
 
@@ -50,10 +51,10 @@ function ChatUI({ }: Props) {
     };
   }
 
-  const handleSendMessage = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSendMessage = async () => {
     if (!message) return;
 
+    console.log(message)
     // Add user message to conversation
     const userMessage: ConversationType = {
       id: Math.floor(Math.random() * 10000) + 1,
@@ -117,7 +118,17 @@ function ChatUI({ }: Props) {
 
       {/* -------------------- Conversation Area ---------------------- */}
       <div className="flex-1 flex flex-col justify-end gap-y-3 py-20 px-3 overflow-y-auto">
-        {messages.map(messageObj => (
+        {messages.length === 0 && (
+          <div className="flex-1 flex items-center justify-center px-6">
+            <SuggestionBox
+              message={message}
+              setMessage={setMessage}
+              handleSendMessage={handleSendMessage}
+            />
+          </div>
+        )}
+
+        {messages.length > 0 && messages.map(messageObj => (
           <div key={messageObj.id} className={`flex items-start gap-2 ${messageObj.user === 'user' ? 'justify-start' : 'flex-row-reverse'}`}>
             {messageObj.user === 'user' && <Avatar userType='user' />}
             {messageObj.user === 'ai' && <Avatar userType='ai' />}
