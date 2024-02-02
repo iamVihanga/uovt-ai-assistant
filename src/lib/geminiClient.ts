@@ -52,4 +52,36 @@ export const chatHistory: any[] = [
     "role": "model",
     "parts": ["The departments under the Faculty of Information and Communication Technology (ICT) at University of Vocational Technology (UOVT) are:\n\n* **Department of Software Technology**\n* **Department of Network Technology**\n* **Department of Multimedia and Web Technology**\n\nThese departments offer a range of undergraduate and postgraduate programs in their respective fields, providing students with the opportunity to develop the skills and knowledge necessary for successful careers in the ICT industry.\n\n**Department of Software Technology:**\n\n* Offers programs in software engineering, software development, and information systems.\n* Focuses on the design, development, and implementation of software applications.\n\n**Department of Network Technology:**\n\n* Offers programs in computer networking, network engineering, and cybersecurity.\n* Focuses on the design, implementation, and management of computer networks.\n\n**Department of Multimedia and Web Technology:**\n\n* Offers programs in multimedia technology, web design and development, and digital media.\n* Focuses on the creation and management of multimedia content and interactive web applications.\n\nGraduates from the Faculty of ICT at UOVT are highly sought after by employers in the ICT industry, both locally and internationally.\n\nI hope this information is helpful. Please let me know if you have any other questions. 😊"]
   },
+  {
+    "role": "user",
+    "parts": ["Degree Courses list, What z"]
+  },
+  {
+    "role": "model",
+    "parts": ["These are the all the degree programs available at UoVT. There aren't any other degrees other than these.\n\nFaculty of Information Technology\nBachelor of Technology in Software Technology\nBachelor of Technology in Network Technology\nBachelor of Technology in Multimedia and Web Technology\n\nFaculty of Engineering Technology\nBachelor of Engineering  Technology in Building Service Technology\nBachelor of Engineering Technology in Construction Engineering Technology and resource management\nBachelor of Engineering Technology in Manufacturing Technology\nBachelor of Engineering Technology in Mechatronics Technology\n\nFaculty of Industrial Technology\n\nBachelor of Technology in food process Technology\nBachelor of Technology in Quantity surveying Technology\nBachelor of Technology in film and edition Technology\nBachelor of Technology in Industrial management Technology\nBachelor of Technology in hotel management Technology\nBachelor of Technology in media arts production Technology\n\nFaculty of education\n\nBachelor of Education in English language Technology\nBachelor of Education in Information Technology"]
+  },
+  {
+    "role": "user",
+    "parts": ["Enter Criteria for Software Technology Degree Course, What are the qualifications I need to enter to Software Technology Degree"]
+  },
+  {
+    "role": "model",
+    "parts": ["Enter Criteria\n\nAdmission requirements for weekday and weekend degree programmes: Accepted NVQ 5 Qualifications\n\nAutomation and robotic technology\nComputer numerically controlled  manufacturing technology\nInformation and communication technology\nMechatronics technology\n\nAccepted NVQ 6 qualifications (module exemptions granted for all qualifications)\n\nAutomation and robotic technology\nBio medical equipment technology\nInformation and communication technology\nmechatronic technology\n\nAccepted NVQ 6 Equivalent qualifications (Module exemptions granted)\n\nHigher national diploma in information technology in information technology by Sri Lankan Institute of Advanced Technological Education (SLIATE)\n\nAL qualification Weekday degree programm\n\nEngineering Technology (with ICT as a subject)\nPhysical Science or Biological Sciences"]
+  },
+  {
+    "role": "user",
+    "parts": ["What are the all degree programmes UOVT offer"]
+  },
+  {
+    "role": "model",
+    "parts": ["University of Vocational Technology (UOVT) offers a wide range of undergraduate and postgraduate degree programs in various fields of study. Here are the all degree programmes offered by UOVT:\n\n**Faculty of Engineering Technology**\n\n* Bachelor of Technology (B.Tech) in Building Services Technology\n* Bachelor of Technology (B.Tech) in Civil Engineering Technology\n* Bachelor of Technology (B.Tech) in Construction Technology and Resource Management\n* Bachelor of Technology (B.Tech) in Electrical and Electronics Technology\n* Bachelor of Technology (B.Tech"]
+  },
+  {
+    "role": "user",
+    "parts": ["Degree courses list"]
+  },
+  {
+    "role": "model",
+    "parts": ["Here is the list of degree courses offered by University of Vocational Technology (UOVT):\n\n**Faculty of Engineering Technology**\n\n* Bachelor of Technology (B.Tech) in Building Services Technology\n* Bachelor of Technology (B.Tech) in Civil Engineering Technology\n* Bachelor of Technology (B.Tech) in Construction Technology and Resource Management\n* Bachelor of Technology (B.Tech) in Electrical and Electronics Technology\n* Bachelor of Technology (B.Tech) in Manufacturing Technology\n* Bachelor of Technology (B.Tech) in Mechatronics Technology\n\n**Faculty of Industrial Technology**\n\n* Bachelor of Technology (B.Tech) in Agricultural and Food Technology\n* Bachelor of Technology (B.Tech) in Film and Television Production Technology\n* Bachelor of Technology (B.Tech) in Hotel Management Technology\n* Bachelor of Technology (B.Tech) in Industrial Management Technology\n* Bachelor of Technology (B.Tech) in Quantity Surveying Technology\n* Bachelor of Technology (B.Tech) in Tourism Studies\n\n**Faculty of Education Technology**\n\n* Bachelor of Education (B.Ed) in English Language Teaching\n* Bachelor of Education (B.Ed) in Information Technology\n\n**Faculty of Information and Communication Technology**\n\n* Bachelor of Technology (B.Tech) in Multimedia and Web Technology\n* Bachelor of Technology (B.Tech) in Network Technology\n* Bachelor of Technology (B.Tech) in Software Technology\n\nPlease note that this list may not be exhaustive and new programs may be introduced from time to time. For the most up-to-date information, please visit the official UOVT website."]
+  },
 ]
